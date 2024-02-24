@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+
+        title {
+            text-align: center;
+            color: aqua;
+        }
+
+        body {
+
+            background-color: #B5C0D0;
+        }
+        table {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            border-collapse: collapse;
+            
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 2px solid #B5C0D0;
+        }
+
+        th {
+            background-color: #EFECEC;
+        }
+
+        tr:hover {background-color: #EFECEC;}
+
+        .submit-row {
+            text-align: right;
+        }
+
+        .submit-row input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            
+        }
+
+        .submit-row input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"] {
+            width: 100%;
+            height: 20px;
+            border: 2px solid #999696;
+            padding: 5px;   
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Student Registration Form</h1>
+    <form action="/submit_registration" method="post">
+        <table>
+            <tr>
+                <th>First Name:</th>
+                <td><input type="text" name="first_name" required></td>
+            </tr>
+            <tr>
+                <th>Last Name:</th>
+                <td><input type="text" name="last_name" required></td>
+            </tr>
+            <tr>
+                <th>Email:</th>
+                <td><input type="email" name="email" required></td>
+            </tr>
+            <tr>
+                <th>Gender:</th>
+                <td>
+                    <input type="radio" name="gender" value="male" id="male" required>
+                    <label for="male">Male</label><br>
+                    <input type="radio" name="gender" value="female" id="female" required>
+                    <label for="female">Female</label><br>
+                </td>
+            </tr>
+            <tr>
+                <th>Date of Birth:</th>
+                <td><input type="date" name="dob" required></td>
+            </tr>
+            <tr>
+                <th>Address:</th>
+                <td><input type="text" name="address" required></td>
+            </tr>
+            <tr>
+                <th>City:</th>
+                <td><input type="text" name="city" required></td>
+            </tr>
+            <tr>
+                <th>Zip Code:</th>
+                <td><input type="text" name="zip_code" required></td>
+            </tr>
+            <tr class="submit-row">
+                <td colspan="2"><input type="submit" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
